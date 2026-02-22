@@ -25,9 +25,13 @@ a:hover{text-decoration:underline}
 .nav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
 .nav-logo{display:flex;align-items:center}
 .nav-logo img{height:56px;width:auto}
+.nav-links.open{display:flex!important}
+.nav-links{display:flex;gap:20px;font-size:14px}
+.nav-links a{color:var(--text2);font-weight:500}
+.nav-links a:hover{color:var(--accent);text-decoration:none}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
 .burger svg{width:26px;height:26px;stroke:var(--text);stroke-width:2}
-.nav-links.open{display:flex!important}
+
 .hero{padding:100px 20px 48px;text-align:center;background:linear-gradient(180deg,var(--accentLight) 0%,var(--bg) 100%)}
 .hero-badge{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px}
 .hero h1{font-size:clamp(24px,4.5vw,38px);font-weight:800;line-height:1.25;color:var(--text);margin-bottom:14px;letter-spacing:-.4px}
@@ -111,6 +115,7 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:28px 20p
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 @media(max-width:768px){
 .nav-links{display:none;position:absolute;top:56px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;padding:12px 24px;gap:10px;box-shadow:var(--shadow2)}
+.nav-links.open{display:flex}
 .burger{display:block}
 .stats{grid-template-columns:repeat(2,1fr)}
 .r-card-top{display:grid;grid-template-columns:38px 1fr;grid-template-rows:auto auto;gap:8px 12px;align-items:center}
