@@ -16,122 +16,123 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%232563eb'/><text x='50' y='70' font-size='50' font-weight='bold' text-anchor='middle' fill='white'>H</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f8f9fb;--bg2:#ffffff;--bg3:#f1f3f8;--card:#ffffff;--border:#e2e5ed;--accent:#2563eb;--accent2:#1d4ed8;--accentLight:#eff4ff;--green:#16a34a;--greenLight:#ecfdf3;--red:#dc2626;--redLight:#fef2f2;--orange:#ea580c;--text:#1a1a2e;--text2:#64748b;--text3:#94a3b8;--shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);--shadow2:0 4px 16px rgba(0,0,0,.08);--radius:12px}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.7;font-size:16px}
+:root{--bg:#f7f8fb;--bg2:#fff;--bg3:#f0f2f7;--card:#fff;--border:#e3e6ee;--accent:#2563eb;--accent2:#1d4ed8;--accentLight:#eef3ff;--green:#16a34a;--greenLight:#edfcf2;--red:#dc2626;--redLight:#fef2f2;--orange:#ea580c;--orangeLight:#fff7ed;--text:#1a1a2e;--text2:#64748b;--text3:#94a3b8;--gold:#f59e0b;--shadow:0 1px 3px rgba(0,0,0,.05);--shadow2:0 6px 24px rgba(0,0,0,.08);--radius:14px}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;font-size:16px}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-.wrap{max-width:900px;margin:0 auto;padding:0 20px}
-.nav{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:100;padding:0 24px}
-.nav-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-logo{font-size:18px;font-weight:700;color:var(--text);letter-spacing:-.3px}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.nav{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);z-index:100;padding:0 24px}
+.nav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-logo{font-size:18px;font-weight:700;color:var(--text)}
 .nav-logo span{color:var(--accent)}
 .nav-links{display:flex;gap:20px;font-size:14px}
 .nav-links a{color:var(--text2);font-weight:500}
 .nav-links a:hover{color:var(--accent);text-decoration:none}
-.hero{padding:100px 20px 50px;text-align:center;background:linear-gradient(180deg,var(--accentLight) 0%,var(--bg) 100%)}
-.hero-badge{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:20px}
-.hero h1{font-size:clamp(26px,4.5vw,40px);font-weight:800;line-height:1.2;color:var(--text);margin-bottom:16px;letter-spacing:-.5px}
-.hero p{font-size:18px;color:var(--text2);max-width:640px;margin:0 auto 28px}
-.hero-cta{display:inline-block;background:var(--accent);color:#fff;padding:13px 32px;border-radius:10px;font-weight:600;font-size:15px;transition:background .2s}
+.hero{padding:100px 20px 48px;text-align:center;background:linear-gradient(180deg,var(--accentLight) 0%,var(--bg) 100%)}
+.hero-badge{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px}
+.hero h1{font-size:clamp(24px,4.5vw,38px);font-weight:800;line-height:1.25;color:var(--text);margin-bottom:14px;letter-spacing:-.4px}
+.hero p{font-size:17px;color:var(--text2);max-width:620px;margin:0 auto 24px}
+.hero-cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 30px;border-radius:10px;font-weight:600;font-size:15px;transition:background .2s}
 .hero-cta:hover{background:var(--accent2);text-decoration:none}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 auto 50px;max-width:700px}
-.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 12px;text-align:center;box-shadow:var(--shadow)}
-.stat-num{font-size:26px;font-weight:800;color:var(--accent)}
-.stat-label{font-size:12px;color:var(--text2);margin-top:4px}
-section{padding:40px 0}
-h2{font-size:clamp(22px,3.5vw,30px);font-weight:700;margin-bottom:12px;color:var(--text);letter-spacing:-.3px}
-h3{font-size:20px;font-weight:600;margin:24px 0 10px;color:var(--text)}
-.section-sub{color:var(--text2);font-size:15px;margin-bottom:28px}
-.rating-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:16px;box-shadow:var(--shadow);display:grid;grid-template-columns:48px 1fr auto;gap:20px;align-items:start;transition:box-shadow .2s}
-.rating-card:hover{box-shadow:var(--shadow2)}
-.rank{width:48px;height:48px;background:var(--accentLight);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:var(--accent)}
-.rank-top{background:var(--accent);color:#fff}
-.card-body h3{margin:0 0 6px;font-size:18px}
-.card-desc{color:var(--text2);font-size:14px;line-height:1.6;margin-bottom:10px}
-.card-tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:11px;padding:3px 10px;border-radius:6px;font-weight:500;background:var(--bg3);color:var(--text2)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 auto 44px;max-width:700px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 10px;text-align:center;box-shadow:var(--shadow)}
+.stat-num{font-size:24px;font-weight:800;color:var(--accent)}
+.stat-label{font-size:12px;color:var(--text2);margin-top:3px}
+section{padding:36px 0}
+h2{font-size:clamp(21px,3.5vw,28px);font-weight:700;margin-bottom:10px;color:var(--text)}
+h3{font-size:19px;font-weight:600;margin:22px 0 8px;color:var(--text)}
+.section-sub{color:var(--text2);font-size:15px;margin-bottom:24px}
+/* ===== NEW CARD DESIGN ===== */
+.r-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:18px;box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .2s}
+.r-card:hover{box-shadow:var(--shadow2)}
+.r-card-top{display:flex;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.r-badge{min-width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;background:var(--bg3);color:var(--text2)}
+.r-badge-gold{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#fff}
+.r-badge-silver{background:linear-gradient(135deg,#cbd5e1,#94a3b8);color:#fff}
+.r-badge-bronze{background:linear-gradient(135deg,#fdba74,#ea580c);color:#fff}
+.r-name{font-size:20px;font-weight:700;color:var(--text);flex:1}
+.r-stars{display:flex;gap:2px;align-items:center;color:var(--gold);font-size:14px}
+.r-stars span{color:var(--text);font-weight:700;font-size:16px;margin-left:6px}
+.r-price-block{text-align:right;display:flex;flex-direction:column;align-items:flex-end}
+.r-price-label{font-size:12px;color:var(--text2)}
+.r-price{font-size:22px;font-weight:800;color:var(--accent)}
+.r-card-body{padding:18px 24px}
+.r-desc{font-size:14px;line-height:1.7;color:var(--text2);margin-bottom:12px}
+.r-minus{font-size:13px;line-height:1.6;color:var(--red);background:var(--redLight);padding:10px 14px;border-radius:10px;margin-bottom:12px}
+.r-minus b{color:#991b1b}
+.r-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tag{font-size:11px;padding:4px 10px;border-radius:6px;font-weight:500;background:var(--bg3);color:var(--text2)}
 .tag-green{background:var(--greenLight);color:var(--green)}
 .tag-blue{background:var(--accentLight);color:var(--accent)}
-.card-right{text-align:right;min-width:120px}
-.price{font-size:22px;font-weight:700;color:var(--text)}
-.price-label{font-size:12px;color:var(--text2)}
-.score{display:inline-block;background:var(--green);color:#fff;padding:4px 12px;border-radius:8px;font-size:14px;font-weight:700;margin-top:8px}
-.card-btn{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:600;transition:background .2s}
-.card-btn:hover{background:var(--accent2);text-decoration:none}
+.tag-orange{background:var(--orangeLight);color:var(--orange)}
+.r-card-bottom{display:flex;gap:10px;padding:0 24px 20px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:10px 22px;border-radius:10px;font-size:14px;font-weight:600;transition:background .2s}
+.btn-primary:hover{background:var(--accent2);text-decoration:none}
+.btn-outline{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--accent);padding:10px 22px;border-radius:10px;font-size:14px;font-weight:600;border:1.5px solid var(--accent);transition:all .2s}
+.btn-outline:hover{background:var(--accentLight);text-decoration:none}
+/* ===== TABLE ===== */
 .compare-table{width:100%;border-collapse:collapse;font-size:13px;margin:20px 0;background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.compare-table th{background:var(--accent);color:#fff;padding:12px 10px;font-weight:600;text-align:left;white-space:nowrap}
-.compare-table td{padding:10px;border-bottom:1px solid var(--border);vertical-align:middle}
+.compare-table th{background:var(--accent);color:#fff;padding:11px 10px;font-weight:600;text-align:left;white-space:nowrap}
+.compare-table td{padding:10px;border-bottom:1px solid var(--border)}
 .compare-table tr:last-child td{border-bottom:none}
 .compare-table tr:hover td{background:var(--accentLight)}
-.tbl-check{color:var(--green);font-weight:700}
-.tbl-cross{color:var(--red);font-weight:700}
-.article-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-bottom:24px;box-shadow:var(--shadow)}
-.article-block p{margin-bottom:14px;color:var(--text);font-size:15px;line-height:1.75}
+.tbl-y{color:var(--green);font-weight:700}
+.tbl-n{color:var(--red);font-weight:700}
+/* ===== ARTICLE ===== */
+.article-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:22px;box-shadow:var(--shadow)}
+.article-block p{margin-bottom:13px;font-size:15px;line-height:1.75}
 .article-block p:last-child{margin-bottom:0}
-.hint{background:var(--accentLight);border-left:3px solid var(--accent);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:16px 0;font-size:14px;color:var(--text)}
-.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
-.pros,.cons{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.hint{background:var(--accentLight);border-left:3px solid var(--accent);padding:13px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:14px 0;font-size:14px;color:var(--text)}
+.code-hint{background:#1e293b;color:#e2e8f0;padding:14px 18px;border-radius:10px;font-family:'Courier New',monospace;font-size:13px;overflow-x:auto;margin:12px 0;line-height:1.5}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.pros,.cons{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
 .pros h3{color:var(--green);margin-top:0}
 .cons h3{color:var(--red);margin-top:0}
 .pros p,.cons p{font-size:14px;line-height:1.7;color:var(--text2)}
-.faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden}
-.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;user-select:none}
+/* ===== FAQ ===== */
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;box-shadow:var(--shadow);overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;user-select:none}
 .faq-q:hover{background:var(--bg3)}
 .faq-q::after{content:'+';font-size:20px;color:var(--accent);font-weight:300;transition:transform .2s}
 .faq-item.open .faq-q::after{transform:rotate(45deg)}
-.faq-a{display:none;padding:0 20px 16px;font-size:14px;line-height:1.7;color:var(--text2)}
+.faq-a{display:none;padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--text2)}
 .faq-item.open .faq-a{display:block}
-.kw-cloud{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.kw-tag{font-size:12px;padding:5px 14px;border-radius:20px;background:var(--bg3);color:var(--text2);border:1px solid var(--border)}
-.cta-block{background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:var(--radius);padding:40px;text-align:center;margin:40px 0;color:#fff}
-.cta-block h2{color:#fff;margin-bottom:10px}
-.cta-block p{color:rgba(255,255,255,.85);margin-bottom:20px}
-.cta-btn{display:inline-block;background:#fff;color:var(--accent);padding:13px 32px;border-radius:10px;font-weight:700;font-size:15px}
+.kw-cloud{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}
+.kw-tag{font-size:12px;padding:5px 12px;border-radius:20px;background:var(--bg3);color:var(--text2);border:1px solid var(--border)}
+.cta-block{background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:var(--radius);padding:36px;text-align:center;margin:36px 0;color:#fff}
+.cta-block h2{color:#fff;margin-bottom:8px}
+.cta-block p{color:rgba(255,255,255,.85);margin-bottom:18px}
+.cta-btn{display:inline-block;background:#fff;color:var(--accent);padding:12px 30px;border-radius:10px;font-weight:700;font-size:15px}
 .cta-btn:hover{text-decoration:none;opacity:.9}
-footer{background:var(--bg3);border-top:1px solid var(--border);padding:30px 20px;text-align:center;font-size:13px;color:var(--text2);margin-top:40px}
-.toc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin:30px 0;box-shadow:var(--shadow)}
-.toc-title{font-weight:700;font-size:16px;margin-bottom:12px;color:var(--text)}
-.toc a{display:block;padding:5px 0;color:var(--accent);font-size:14px}
-.toc a:hover{text-decoration:underline}
+footer{background:var(--bg3);border-top:1px solid var(--border);padding:28px 20px;text-align:center;font-size:13px;color:var(--text2);margin-top:36px}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px 26px;margin:28px 0;box-shadow:var(--shadow)}
+.toc-title{font-weight:700;font-size:16px;margin-bottom:10px}
+.toc a{display:block;padding:4px 0;color:var(--accent);font-size:14px}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 @media(max-width:768px){
 .nav-links{display:none}
 .stats{grid-template-columns:repeat(2,1fr)}
-.rating-card{grid-template-columns:40px 1fr;gap:12px}
-.card-right{grid-column:1/-1;text-align:left;display:flex;align-items:center;gap:12px;min-width:auto}
+.r-card-top{flex-direction:column;align-items:flex-start;gap:10px}
+.r-price-block{align-items:flex-start;text-align:left}
 .pros-cons{grid-template-columns:1fr}
-.compare-table{font-size:12px}
 }
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Article",
-  "headline":"Рейтинг хостингов 2026 - ТОП лучших хостинг-провайдеров для сайта в России",
-  "description":"Сравнение 12 лучших хостингов для сайта. Цены от 99 руб/мес, тесты скорости, подробные обзоры и таблица тарифов.",
-  "datePublished":"2026-02-22",
-  "dateModified":"2026-02-22",
-  "author":{"@type":"Organization","name":"Рейтинг Хостингов"},
-  "publisher":{"@type":"Organization","name":"Рейтинг Хостингов"}
-}
+{"@context":"https://schema.org","@type":"Article","headline":"Рейтинг хостингов 2026 - ТОП лучших хостинг-провайдеров для сайта в России","description":"Сравнение 12 лучших хостингов для сайта. Цены от 99 руб/мес, тесты скорости, подробные обзоры и таблица тарифов.","datePublished":"2026-02-22","dateModified":"2026-02-22","author":{"@type":"Organization","name":"Рейтинг Хостингов"},"publisher":{"@type":"Organization","name":"Рейтинг Хостингов"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Какой хостинг лучше выбрать для сайта в 2026 году?","acceptedAnswer":{"@type":"Answer","text":"Для большинства задач подойдут Timeweb или Beget. Оба провайдера предлагают стабильную работу, удобные панели управления, бесплатный SSL и круглосуточную поддержку. Timeweb чуть дешевле на стартовых тарифах, а Beget выделяется 30-дневным тестовым периодом."}},
-    {"@type":"Question","name":"Сколько стоит хостинг для сайта?","acceptedAnswer":{"@type":"Answer","text":"Средняя стоимость виртуального хостинга у российских провайдеров составляет от 99 до 400 рублей в месяц. Начальные тарифы SpaceWeb стартуют от 99 руб/мес, AdminVPS от 59 руб/мес, Beget от 165 руб/мес при оплате за год. При оплате помесячно цена обычно выше на 20-30%."}},
-    {"@type":"Question","name":"Чем виртуальный хостинг отличается от VPS?","acceptedAnswer":{"@type":"Answer","text":"На виртуальном хостинге ваш сайт делит ресурсы сервера с другими клиентами, при этом провайдер берет на себя все техническое обслуживание. VPS предоставляет выделенные ресурсы и полный root-доступ, но требует навыков администрирования. Для сайтов-визиток, блогов и небольших магазинов виртуального хостинга более чем достаточно."}},
-    {"@type":"Question","name":"Какой хостинг подходит для WordPress?","acceptedAnswer":{"@type":"Answer","text":"Практически все крупные российские провайдеры поддерживают WordPress. Timeweb, Beget и REG.ru предлагают автоустановку CMS. Для комфортной работы WordPress достаточно тарифа с 1 ГБ дискового пространства, PHP 8.x и базой данных MySQL. Некоторые хостеры, например Timeweb, имеют отдельные CMS-тарифы с предустановленными оптимизациями."}},
-    {"@type":"Question","name":"Нужен ли SSL-сертификат и дают ли его бесплатно?","acceptedAnswer":{"@type":"Answer","text":"SSL обязателен для любого сайта: без него браузеры показывают предупреждение о небезопасном соединении, а поисковики понижают позиции. Большинство провайдеров из нашего рейтинга предоставляют бесплатный SSL-сертификат Let's Encrypt, который продлевается автоматически."}},
-    {"@type":"Question","name":"Можно ли перенести сайт на другой хостинг без потерь?","acceptedAnswer":{"@type":"Answer","text":"Да, перенос сайта между провайдерами стал стандартной процедурой. Beget, Timeweb, SpaceWeb и другие предлагают бесплатный перенос силами технической поддержки. Обычно процесс занимает от нескольких часов до суток, при этом сайт продолжает работать у старого хостера до завершения переноса DNS."}},
-    {"@type":"Question","name":"Какой хостинг подходит для интернет-магазина?","acceptedAnswer":{"@type":"Answer","text":"Для интернет-магазина важны скорость загрузки, стабильность и наличие SSL. Подойдут тарифы среднего уровня у Timeweb, Beget или REG.ru с NVMe-дисками и объемом от 10 ГБ. Если магазин работает на 1С-Битрикс, обратите внимание на сертифицированные тарифы Timeweb и REG.ru."}},
-    {"@type":"Question","name":"Что такое NVMe и зачем он на хостинге?","acceptedAnswer":{"@type":"Answer","text":"NVMe - это тип твердотельного накопителя, который работает в несколько раз быстрее обычного SSD. На практике это означает более быструю загрузку страниц, ускоренную работу баз данных и лучший отклик сайта. Сейчас большинство крупных провайдеров перешли на NVMe-диски даже на бюджетных тарифах."}},
-    {"@type":"Question","name":"Бывает ли бесплатный хостинг?","acceptedAnswer":{"@type":"Answer","text":"Бесплатный хостинг существует, например, у Beget есть тестовый тариф на 30 дней. Однако бесплатные решения на постоянной основе имеют серьезные ограничения: мало дискового пространства, нет поддержки, медленная работа, навязчивая реклама. Для серьезного проекта лучше выбрать платный тариф от 99-150 рублей в месяц."}},
-    {"@type":"Question","name":"Как часто нужно делать бэкапы сайта?","acceptedAnswer":{"@type":"Answer","text":"Резервные копии желательно создавать ежедневно. Все провайдеры из нашего рейтинга выполняют автоматическое резервное копирование, но периодичность различается: у Beget бэкапы делаются ежедневно и хранятся 30 дней, у Timeweb частота зависит от тарифа. Дополнительно рекомендуется хранить собственную копию сайта отдельно от хостинга."}}
-  ]
-}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Какой хостинг лучше выбрать для сайта в 2026 году?","acceptedAnswer":{"@type":"Answer","text":"Для большинства задач подойдут Timeweb или Beget. Timeweb дешевле на стартовых тарифах и щедрее по PHP-лимитам (memory_limit 1024 МБ на минимальном тарифе). Beget выделяется 30-дневным бесплатным тестом и изоляцией аккаунтов."}},
+{"@type":"Question","name":"Сколько стоит хостинг для сайта?","acceptedAnswer":{"@type":"Answer","text":"Средняя стоимость виртуального хостинга у российских провайдеров - от 99 до 400 рублей в месяц. SpaceWeb стартует от 99 руб/мес, AdminVPS от 59 руб/мес, Beget от 165 руб/мес при оплате за год."}},
+{"@type":"Question","name":"Чем виртуальный хостинг отличается от VPS?","acceptedAnswer":{"@type":"Answer","text":"На виртуальном хостинге ваш сайт делит ресурсы с другими клиентами, а провайдер берет на себя обслуживание. VPS дает выделенные ресурсы и root-доступ, но требует навыков администрирования."}},
+{"@type":"Question","name":"Какой хостинг подходит для WordPress?","acceptedAnswer":{"@type":"Answer","text":"Timeweb, Beget и REG.ru предлагают автоустановку WordPress. Для комфортной работы нужен тариф с PHP 8.x, memory_limit от 256 МБ и MySQL. У Timeweb memory_limit 1024 МБ уже на минимальном тарифе."}},
+{"@type":"Question","name":"Нужен ли SSL-сертификат?","acceptedAnswer":{"@type":"Answer","text":"Обязателен. Без SSL браузеры показывают предупреждение, а поисковики понижают позиции. Все провайдеры из рейтинга дают бесплатный Let's Encrypt."}},
+{"@type":"Question","name":"Можно ли перенести сайт без потерь?","acceptedAnswer":{"@type":"Answer","text":"Да. Beget, Timeweb, SpaceWeb предлагают бесплатный перенос. Процесс занимает от нескольких часов до суток, сайт работает без простоя."}},
+{"@type":"Question","name":"Какой хостинг подходит для интернет-магазина?","acceptedAnswer":{"@type":"Answer","text":"Тарифы среднего уровня у Timeweb, Beget или REG.ru с NVMe-дисками и объемом от 10 ГБ. Для 1С-Битрикс нужны сертифицированные тарифы."}},
+{"@type":"Question","name":"Что такое Redis и Memcached на хостинге?","acceptedAnswer":{"@type":"Answer","text":"Это системы кэширования данных в оперативной памяти. Redis хранит результаты запросов к базе данных и ускоряет загрузку в 2-5 раз. Beget предоставляет персональный Redis от 2 руб/день. У Timeweb Redis доступен на тарифах Eterno и Premium."}},
+{"@type":"Question","name":"Какие PHP-лимиты важны при выборе?","acceptedAnswer":{"@type":"Answer","text":"Два ключевых параметра: memory_limit (память для одного скрипта) и max_execution_time (максимальное время выполнения). У Timeweb это 1024 МБ / 800 сек на стартовых тарифах. У Beget по умолчанию 256 МБ / 600 сек, но можно поднять через .htaccess."}},
+{"@type":"Question","name":"Бывает ли бесплатный хостинг?","acceptedAnswer":{"@type":"Answer","text":"У Beget есть тестовый тариф на 30 дней без ограничений. Бесплатные решения на постоянной основе имеют серьезные ограничения. Для серьезного проекта лучше платный тариф от 99-150 рублей."}}
+]}
 </script>
 </head>
 <body>
@@ -143,6 +144,7 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:30px 20p
 <a href="#rating">Рейтинг</a>
 <a href="#compare">Сравнение</a>
 <a href="#guide">Как выбрать</a>
+<a href="#php">PHP/WordPress</a>
 <a href="#faq">FAQ</a>
 </div>
 </div>
@@ -152,14 +154,14 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:30px 20p
 <div class="wrap">
 <div class="hero-badge">Обновлено: Февраль 2026</div>
 <h1>Рейтинг хостингов 2026 - лучшие провайдеры для сайта в России</h1>
-<p>Сравнили 12 популярных хостинг-провайдеров по цене, скорости, надежности и качеству поддержки. Подробные обзоры, реальные тесты, честные рекомендации.</p>
+<p>Сравнили 12 популярных хостеров по цене, скорости, PHP-лимитам, надежности и качеству поддержки. Честные обзоры с минусами, реальные тесты, таблица тарифов.</p>
 <a href="#rating" class="hero-cta">Смотреть рейтинг</a>
 </div>
 </header>
 
 <div class="wrap">
 <div class="stats">
-<div class="stat-card"><div class="stat-num">12</div><div class="stat-label">провайдеров в обзоре</div></div>
+<div class="stat-card"><div class="stat-num">12</div><div class="stat-label">провайдеров</div></div>
 <div class="stat-card"><div class="stat-num">50+</div><div class="stat-label">тарифов проверено</div></div>
 <div class="stat-card"><div class="stat-num">99 &#8381;</div><div class="stat-label">минимальная цена</div></div>
 <div class="stat-card"><div class="stat-num">99.9%</div><div class="stat-label">аптайм лидеров</div></div>
@@ -168,480 +170,545 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:30px 20p
 <div class="toc">
 <div class="toc-title">Содержание</div>
 <a href="#rating">1. Рейтинг хостингов 2026</a>
-<a href="#compare">2. Сравнительная таблица тарифов</a>
-<a href="#guide">3. Как выбрать хостинг для сайта</a>
-<a href="#types">4. Виды хостинга: shared, VPS, dedicated</a>
-<a href="#wordpress">5. Хостинг для WordPress и CMS</a>
-<a href="#speed">6. На что влияет скорость хостинга</a>
-<a href="#proscons">7. Плюсы и минусы виртуального хостинга</a>
-<a href="#transfer">8. Как перенести сайт на новый хостинг</a>
+<a href="#compare">2. Сравнительная таблица</a>
+<a href="#guide">3. Как выбрать хостинг</a>
+<a href="#php">4. PHP-лимиты, Redis, WordPress - технические детали</a>
+<a href="#types">5. Виды хостинга: shared, VPS, dedicated</a>
+<a href="#speed">6. Скорость и её влияние на SEO</a>
+<a href="#proscons">7. Плюсы и минусы shared-хостинга</a>
+<a href="#transfer">8. Как перенести сайт</a>
 <a href="#faq">9. Вопросы и ответы</a>
 </div>
 
+<!-- ==================== RATING ==================== -->
 <section id="rating">
 <h2>Рейтинг хостингов 2026 года</h2>
-<p class="section-sub">Отобрали 12 провайдеров, которые стабильно работают, имеют собственные дата-центры или арендуют стойки у Selectel, DataPro, Xelent и других проверенных площадок.</p>
+<p class="section-sub">12 провайдеров, протестированных на реальных проектах. У каждого указаны не только плюсы, но и конкретные слабые стороны.</p>
 
-<div class="rating-card">
-<div class="rank rank-top">1</div>
-<div class="card-body">
-<h3>Timeweb</h3>
-<div class="card-desc">Один из крупнейших хостеров на российском рынке. Предлагает виртуальный хостинг, облачные серверы, выделенные машины и регистрацию доменов в одном личном кабинете. Панель управления собственной разработки, интуитивная и быстрая. Техподдержка отвечает круглосуточно, в среднем за 5-10 минут. Автоматическая установка WordPress, Joomla, 1С-Битрикс и других CMS. NVMe-диски на всех тарифах, бесплатный SSL, ежедневные резервные копии. При оплате за год дарят домен в зоне .ru или .рф.</div>
-<div class="card-tags">
+<!-- 1. Timeweb -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge r-badge-gold">1</div>
+<div class="r-name">Timeweb</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.8</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от 180 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Один из крупнейших российских хостеров. Собственная панель управления, автоустановка WordPress, Joomla, 1С-Битрикс. NVMe-диски на всех тарифах. Техподдержка 24/7, среднее время ответа 5-10 минут. Щедрые PHP-лимиты: memory_limit 1024 МБ и max_execution_time 800 секунд уже на стартовом тарифе Year+. На Eterno и Premium - 2048 МБ и 1000 секунд. Домен .ru/.рф в подарок при оплате за год. Есть отдельные CMS-тарифы с WP CLI, Composer, Drush.</div>
+<div class="r-minus"><b>Минусы:</b> панель управления отличается от привычного cPanel/ISPmanager - придется привыкать. Цены за последний год ощутимо выросли (до 1.5-2 раз на некоторых тарифах). На дешевых тарифах нет Redis и Memcached - они доступны только на Eterno и Premium.</div>
+<div class="r-tags">
 <span class="tag tag-blue">NVMe SSD</span>
-<span class="tag tag-green">Бесплатный SSL</span>
+<span class="tag tag-green">SSL бесплатно</span>
 <span class="tag">PHP 8.x</span>
-<span class="tag">Домен в подарок</span>
-<span class="tag">Автоустановка CMS</span>
+<span class="tag">memory_limit 1024M</span>
+<span class="tag tag-orange">Домен в подарок</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 180 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">9.5/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#php" class="btn-outline">Читать обзор</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank rank-top">2</div>
-<div class="card-body">
-<h3>Beget (Бегет)</h3>
-<div class="card-desc">Международный облачный провайдер с аккредитацией национального регистратора доменных имен. Собственная панель управления, файловый менеджер Sprut.io с двухпанельным интерфейсом. Все аккаунты изолированы друг от друга, что повышает безопасность. Бесплатный тестовый период 30 дней на любом тарифе, что позволяет оценить работу хостинга без оплаты. Круглосуточная поддержка, 85% обращений закрывают менее чем за полчаса. Redis, Memcached и Sphinx доступны как дополнительные сервисы.</div>
-<div class="card-tags">
+<!-- 2. Beget -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge r-badge-silver">2</div>
+<div class="r-name">Beget (Бегет)</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.8</span></div>
+<div class="r-price-block">
+<div class="r-price-label">При оплате за год</div>
+<div class="r-price">от 165 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Международный облачный провайдер с собственной панелью и файловым менеджером Sprut.io. Все аккаунты изолированы друг от друга. Тестовый период 30 дней без ограничений - можно загрузить рабочий сайт и проверить все под нагрузкой, не заплатив ни рубля. 85% тикетов закрывают менее чем за 30 минут. Redis от 2 руб/день, Memcached от 2 руб/день, Sphinx от 2 руб/день - подключаются отдельно. PHP по умолчанию: memory_limit 256 МБ, max_execution_time 600 сек. Можно поднять через .htaccess до 512 МБ.</div>
+<div class="r-minus"><b>Минусы:</b> PHP-лимиты по умолчанию ниже, чем у Timeweb (256 МБ против 1024 МБ) - для тяжелых плагинов WooCommerce придется поднимать вручную. Redis и Memcached платные (от 2 руб/день каждый), тогда как у некоторых конкурентов они включены в тариф. Помесячная оплата на 20-30% дороже годовой.</div>
+<div class="r-tags">
 <span class="tag tag-blue">30 дней бесплатно</span>
-<span class="tag tag-green">Бесплатный SSL</span>
+<span class="tag tag-green">Изолированные аккаунты</span>
 <span class="tag">NVMe</span>
-<span class="tag">Изолированные аккаунты</span>
-<span class="tag">Redis</span>
+<span class="tag">Redis от 2 руб/день</span>
+<span class="tag">Sprut.io</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 165 &#8381;</div>
-<div class="price-label">руб/мес (за год)</div>
-<div class="score">9.4/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#php" class="btn-outline">Читать обзор</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank rank-top">3</div>
-<div class="card-body">
-<h3>SpaceWeb (Спейсвеб)</h3>
-<div class="card-desc">Петербургский провайдер, работающий с 2001 года. Один из немногих хостеров с минимальным тарифом от 99 рублей в месяц, что делает его привлекательным для новичков и небольших проектов. На старших тарифах доступны выделенные ресурсы CPU, расширенный диск и приоритетная техподдержка. Поддержка PHP, Python, Node.js, MySQL, PostgreSQL. Бесплатный SSL и домен в подарок при оплате за год. Собственный дата-центр в Санкт-Петербурге.</div>
-<div class="card-tags">
+<!-- 3. SpaceWeb -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge r-badge-bronze">3</div>
+<div class="r-name">SpaceWeb</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.5</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от 99 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Петербургский хостер, работает с 2001 года. Самый дешевый стартовый тариф в подборке - от 99 рублей в месяц. На старших тарифах доступны выделенные ресурсы CPU и приоритетная поддержка. Собственный дата-центр в Санкт-Петербурге. Поддержка PHP, Python, Node.js, MySQL, PostgreSQL. Домен в подарок при годовой оплате.</div>
+<div class="r-minus"><b>Минусы:</b> на стартовом тарифе всего 1 ГБ диска - этого мало даже для простого блога с картинками. Тестовый период всего 3 дня, чего недостаточно для полноценной проверки. Панель собственной разработки местами неинтуитивна.</div>
+<div class="r-tags">
 <span class="tag tag-green">от 99 руб/мес</span>
 <span class="tag tag-blue">Домен в подарок</span>
 <span class="tag">PHP / Python / Node.js</span>
-<span class="tag">Бесплатный SSL</span>
+<span class="tag">Собственный ЦОД</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 99 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">9.1/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">4</div>
-<div class="card-body">
-<h3>REG.ru</h3>
-<div class="card-desc">Крупнейший аккредитованный регистратор доменов в России, который также предоставляет виртуальный хостинг, VPS и выделенные серверы. Удобен тем, кто хочет держать домен и хостинг в одном месте. Несколько линеек тарифов: эконом, скоростной, VIP и хостинг на cPanel. Серверы размещены в сертифицированных дата-центрах Tier III. Подойдет для бизнеса, интернет-магазинов и корпоративных сайтов благодаря стабильности и наличию SLA.</div>
-<div class="card-tags">
+<!-- 4. REG.ru -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">4</div>
+<div class="r-name">REG.ru</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.4</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Эконом-линейка</div>
+<div class="r-price">от 129 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Крупнейший регистратор доменов в России, который также дает виртуальный хостинг, VPS и выделенные серверы. Удобен для тех, кто хочет держать домен и площадку в одном месте. Несколько линеек: эконом, скоростной, VIP и хостинг на cPanel. Серверы размещены в сертифицированных ЦОДах Tier III. Есть SLA, подходит для бизнеса.</div>
+<div class="r-minus"><b>Минусы:</b> на эконом-тарифах нет NVMe - используются обычные SSD, что заметно по скорости. Цены на продление доменов с 2026 года выросли (домен .ru теперь 999 руб/год). Интерфейс личного кабинета перегружен рекламой допуслуг.</div>
+<div class="r-tags">
 <span class="tag tag-blue">Регистратор + хостинг</span>
 <span class="tag">Tier III ЦОД</span>
 <span class="tag">cPanel</span>
 <span class="tag tag-green">SLA</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 129 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">8.9/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">5</div>
-<div class="card-body">
-<h3>AdminVPS</h3>
-<div class="card-desc">Провайдер, который выделяется бесплатным администрированием серверов на всех тарифах. Это редкость на рынке: обычно за настройку и обслуживание серверной части приходится платить отдельно или разбираться самостоятельно. Подходит тем, кто не хочет вникать в технические детали. Виртуальный хостинг от 59 рублей, VPS от 169 рублей. Дата-центры в Москве и Европе. Поддержка работает круглосуточно.</div>
-<div class="card-tags">
+<!-- 5. AdminVPS -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">5</div>
+<div class="r-name">AdminVPS</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.3</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от 59 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Главная фишка - бесплатное администрирование серверов на всех тарифах, включая VPS. Это большая редкость: обычно настройку серверной части приходится оплачивать отдельно или делать самому. Хостинг от 59 рублей, VPS от 169 рублей. ЦОДы в Москве и Европе. Поддержка 24/7, Anti-DDoS на всех тарифах. memory_limit 512 МБ, CPU-лимит 90 cp на виртуальном хостинге.</div>
+<div class="r-minus"><b>Минусы:</b> строгие лимиты нагрузки на CPU. Чуть превысил порог - получаешь письмо с просьбой перейти на тариф дороже. На форумах регулярно жалуются на это. Трафик формально "безлимитный", но при аномальном объеме могут ограничить. На VPS-тарифах бывают жалобы на нестабильный пинг.</div>
+<div class="r-tags">
 <span class="tag tag-green">Бесплатное администрирование</span>
 <span class="tag tag-blue">от 59 руб/мес</span>
 <span class="tag">Москва + Европа</span>
-<span class="tag">24/7 поддержка</span>
+<span class="tag tag-orange">Anti-DDoS</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 59 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">8.7/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">6</div>
-<div class="card-body">
-<h3>Спринтхост</h3>
-<div class="card-desc">Российский хостер, ориентированный на скорость работы. Серверы собраны на процессорах последнего поколения, все диски NVMe. Панель управления ISPmanager идет бесплатно на любом тарифе. Есть готовые решения для 1С-Битрикс и WordPress с предустановленными оптимизациями. Хорошая техподдержка, которая помогает не только с хостингом, но и с настройкой CMS. Тестовый период 14 дней.</div>
-<div class="card-tags">
+<!-- 6. Спринтхост -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">6</div>
+<div class="r-name">Спринтхост</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.3</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от 149 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Российский хостер, заточенный под скорость. Процессоры последнего поколения, NVMe-диски. ISPmanager идет бесплатно на всех тарифах. Готовые профили для 1С-Битрикс и WordPress с предустановленными оптимизациями. Поддержка помогает не только с хостингом, но и с настройкой CMS. Тестовый период 14 дней.</div>
+<div class="r-minus"><b>Минусы:</b> на минимальном тарифе всего 5 ГБ диска и 1 сайт - масштабироваться можно только переходом на более дорогой план. Нет собственной панели - зависимость от ISPmanager (если лицензия ISP подорожает, вырастет и цена). Меньше известен, чем Timeweb/Beget, меньше отзывов.</div>
+<div class="r-tags">
 <span class="tag tag-blue">ISPmanager бесплатно</span>
 <span class="tag tag-green">14 дней тест</span>
 <span class="tag">NVMe</span>
-<span class="tag">Оптимизация под 1С-Битрикс</span>
+<span class="tag">1С-Битрикс оптимизация</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 149 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">8.6/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">7</div>
-<div class="card-body">
-<h3>Макхост (Mchost)</h3>
-<div class="card-desc">Работает на рынке более 10 лет. Стабильный провайдер без лишних маркетинговых обещаний. Отдельные тарифные линейки для обычных сайтов и для CMS-проектов на 1С-Битрикс. Виртуальный хостинг от 232 рублей в месяц, VPS от 417 рублей. Поддержка PHP, MySQL, PostgreSQL. Бесплатный SSL на всех тарифах, домен в подарок при годовой оплате. Дата-центр в Москве (DataPro, Tier III).</div>
-<div class="card-tags">
+<!-- 7. Макхост -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">7</div>
+<div class="r-name">Макхост (Mchost)</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.2</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от 232 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Работает более 10 лет, стабильный провайдер без громких маркетинговых обещаний. Отдельные тарифные линейки для обычных проектов и для CMS на 1С-Битрикс. VPS от 417 рублей. Поддержка PHP, MySQL, PostgreSQL. SSL на всех тарифах. ЦОД DataPro в Москве (Tier III). Домен в подарок при годовой оплате.</div>
+<div class="r-minus"><b>Минусы:</b> собственная панель управления выглядит архаично по сравнению с конкурентами - интерфейс не обновлялся уже давно. Стартовый тариф 232 руб/мес - дороже, чем у большинства. Всего 3 ГБ диска и 1 сайт на минимальном плане. По отзывам, поддержка отвечает медленнее, чем у Timeweb и Beget.</div>
+<div class="r-tags">
 <span class="tag">Tier III DataPro</span>
-<span class="tag tag-green">Бесплатный SSL</span>
+<span class="tag tag-green">SSL бесплатно</span>
 <span class="tag tag-blue">Домен в подарок</span>
-<span class="tag">CMS-тарифы</span>
+<span class="tag tag-orange">CMS-тарифы</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 232 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">8.4/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">8</div>
-<div class="card-body">
-<h3>FirstVDS</h3>
-<div class="card-desc">Один из старейших провайдеров, работает с 2002 года. Специализируется на VPS/VDS, но также предоставляет виртуальный хостинг. Серверы расположены в дата-центре Selectel (Санкт-Петербург, Tier III). Большой выбор операционных систем для VPS, включая различные дистрибутивы Linux и Windows Server. Гибкие тарифы: можно начать с минимальной конфигурации и масштабироваться по мере роста проекта.</div>
-<div class="card-tags">
+<!-- 8. FirstVDS -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">8</div>
+<div class="r-name">FirstVDS</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.1</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от 139 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Один из старейших провайдеров, работает с 2002 года. Специализация - VPS/VDS, но виртуальный хостинг тоже есть. Серверы в ЦОД Selectel (Санкт-Петербург, Tier III). Большой выбор ОС для VPS, включая различные Linux-дистрибутивы и Windows Server. Гибкие тарифы с возможностью масштабирования.</div>
+<div class="r-minus"><b>Минусы:</b> виртуальный хостинг явно не приоритетное направление - основной фокус на VPS. Панель ISPmanager платная на VPS (от 270 руб/мес). Тестовый период всего 3 дня. По отзывам, бывают эпизоды медленной работы на бюджетных VPS из-за оверселлинга.</div>
+<div class="r-tags">
 <span class="tag">Selectel Tier III</span>
-<span class="tag tag-blue">Работает с 2002</span>
+<span class="tag tag-blue">С 2002 года</span>
 <span class="tag">Linux + Windows</span>
-<span class="tag tag-green">Гибкое масштабирование</span>
+<span class="tag tag-green">Масштабирование</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 139 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">8.3/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">9</div>
-<div class="card-body">
-<h3>Джино (Jino)</h3>
-<div class="card-desc">Уникальный подход к тарификации: конструктор тарифов, где вы выбираете нужные параметры и платите только за них. Это удобно, если требуется нестандартная конфигурация, например, много дискового пространства, но мало вычислительных ресурсов. Собственная панель управления, поддержка PHP, Python, Ruby, Node.js. Есть бесплатный тариф с ограничениями для тестирования. VPS от 208 рублей в месяц.</div>
-<div class="card-tags">
+<!-- 9. Джино -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">9</div>
+<div class="r-name">Джино (Jino)</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.1</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Конструктор тарифов</div>
+<div class="r-price">от 208 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Уникальный подход к ценообразованию: конструктор тарифов, где вы собираете нужные параметры и платите только за них. Удобно при нестандартных требованиях - например, много места на диске при минимуме CPU. Собственная панель, поддержка PHP, Python, Ruby, Node.js. Есть бесплатный тариф с ограничениями для тестов.</div>
+<div class="r-minus"><b>Минусы:</b> конструктор тарифов, который является фишкой, одновременно и проблема - новичкам сложно разобраться, какие параметры им нужны. Собственная панель своеобразная, к ней нужно привыкать. Поддержка работает медленнее, чем у лидеров рейтинга.</div>
+<div class="r-tags">
 <span class="tag tag-blue">Конструктор тарифов</span>
 <span class="tag tag-green">Гибкая тарификация</span>
 <span class="tag">PHP / Python / Ruby</span>
 <span class="tag">Собственная панель</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 208 &#8381;</div>
-<div class="price-label">руб/мес</div>
-<div class="score">8.2/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">10</div>
-<div class="card-body">
-<h3>Fornex</h3>
-<div class="card-desc">Международный провайдер с серверами в Европе и США. Подходит для проектов, которым нужна западная инфраструктура: сайты на иностранную аудиторию, SaaS-приложения, тестовые среды. Принимает оплату в рублях и криптовалюте. NVMe-диски, DDoS-защита в комплекте, бесплатный SSL. Техподдержка на русском языке. VPS от 2.5 евро в месяц. Виртуальный хостинг на cPanel.</div>
-<div class="card-tags">
+<!-- 10. Fornex -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">10</div>
+<div class="r-name">Fornex</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.0</span></div>
+<div class="r-price-block">
+<div class="r-price-label">VPS (Европа)</div>
+<div class="r-price">от 2.5 &euro;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Международный провайдер с серверами в Европе и США. Хороший вариант для проектов на зарубежную аудиторию, SaaS-приложений и тестовых сред. Принимает рубли и криптовалюту. NVMe, DDoS-защита в комплекте, бесплатный SSL. Русскоязычная поддержка. cPanel на виртуальном хостинге.</div>
+<div class="r-minus"><b>Минусы:</b> российских ЦОДов нет - для аудитории из РФ пинг будет выше (40-80 мс вместо 10-20 мс). Тестовый период всего 3 дня. На виртуальном хостинге доступно меньше функций, чем на VPS. Не подходит для проектов, которым важна локализация серверов в России.</div>
+<div class="r-tags">
 <span class="tag tag-blue">Европа + США</span>
 <span class="tag tag-green">DDoS-защита</span>
 <span class="tag">NVMe</span>
 <span class="tag">cPanel</span>
-<span class="tag">Крипто-оплата</span>
+<span class="tag tag-orange">Крипто-оплата</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 2.5 &euro;</div>
-<div class="price-label">евро/мес</div>
-<div class="score">8.1/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">11</div>
-<div class="card-body">
-<h3>Fozzy</h3>
-<div class="card-desc">Провайдер с дата-центрами в Нидерландах и США. Предлагает виртуальный хостинг, VPS, выделенные серверы и CDN. Отличается высокой пропускной способностью каналов: до 1 Гбит/с даже на бюджетных тарифах. Поддержка cPanel, Softaculous для автоустановки более 400 приложений. Хороший вариант для разработчиков и тех, кому нужен зарубежный хостинг с русскоязычной поддержкой.</div>
-<div class="card-tags">
+<!-- 11. Fozzy -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">11</div>
+<div class="r-name">Fozzy</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.0</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от $3.49/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Провайдер с ЦОДами в Нидерландах и США. Высокая пропускная способность каналов: до 1 Гбит/с даже на бюджетных тарифах. cPanel, Softaculous для автоустановки 400+ приложений. Подойдет разработчикам и тем, кому нужен зарубежный хостинг с русскоязычной поддержкой.</div>
+<div class="r-minus"><b>Минусы:</b> цены в долларах - при ослаблении рубля стоимость растет. Нет серверов в России. Тарифы "Быстрые сайты" ограничены 1-5 сайтами и таким же количеством баз данных. Русскоязычная поддержка бывает перегружена.</div>
+<div class="r-tags">
 <span class="tag tag-blue">Нидерланды + США</span>
 <span class="tag">cPanel</span>
 <span class="tag tag-green">1 Гбит/с</span>
 <span class="tag">Softaculous</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от 3.49 $</div>
-<div class="price-label">долл/мес</div>
-<div class="score">8.0/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
-<div class="rating-card">
-<div class="rank">12</div>
-<div class="card-body">
-<h3>Hostinger</h3>
-<div class="card-desc">Международный провайдер с более чем 29 миллионами клиентов по всему миру. Очень агрессивные цены при оплате за 4 года, но стоимость продления существенно выше. Панель hPanel собственной разработки, бесплатный конструктор сайтов на основе ИИ, безлимитный трафик и бесплатный SSL. Серверы в Европе, Азии и Америке. Из минусов: оплата из России требует дополнительных шагов, нет российских дата-центров.</div>
-<div class="card-tags">
-<span class="tag tag-blue">29M+ клиентов</span>
-<span class="tag">hPanel</span>
+<!-- 12. Евробайт (заменили Hostinger) -->
+<div class="r-card">
+<div class="r-card-top">
+<div class="r-badge">12</div>
+<div class="r-name">Евробайт</div>
+<div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>3.9</span></div>
+<div class="r-price-block">
+<div class="r-price-label">Виртуальный хостинг</div>
+<div class="r-price">от 159 &#8381;/мес</div>
+</div>
+</div>
+<div class="r-card-body">
+<div class="r-desc">Бюджетный российский провайдер с безлимитным трафиком и дисковым пространством на старших тарифах. Все серверы защищены от DDoS-атак. Поддержка круглосуточная. Выделенные серверы от 3000 руб/мес - одни из самых доступных на рынке. Оплата в рублях, без валютных рисков. Тарифы от 144 руб/мес при годовой оплате.</div>
+<div class="r-minus"><b>Минусы:</b> сайт провайдера выглядит устаревшим, у тарифов нет подробных описаний - только цена и объем диска. Отзывы неоднозначные: часть пользователей хвалят за стабильность, часть жалуются на медленную работу сайтов. Не самый популярный хостер - меньше информации и гайдов в сети.</div>
+<div class="r-tags">
 <span class="tag tag-green">Безлимитный трафик</span>
-<span class="tag">Конструктор сайтов</span>
+<span class="tag tag-blue">DDoS-защита</span>
+<span class="tag">Оплата в рублях</span>
+<span class="tag tag-orange">Выделенные серверы от 3000 руб</span>
 </div>
 </div>
-<div class="card-right">
-<div class="price">от $2.49</div>
-<div class="price-label">долл/мес</div>
-<div class="score">7.8/10</div><br>
-<a href="#" class="card-btn" rel="nofollow noopener sponsored" target="_blank">Выбрать</a>
+<div class="r-card-bottom">
+<a href="#" class="btn-primary" rel="nofollow noopener sponsored" target="_blank">Перейти на сайт</a>
+<a href="#compare" class="btn-outline">Сравнить тарифы</a>
 </div>
 </div>
 
 </section>
 
+<!-- ==================== COMPARE TABLE ==================== -->
 <section id="compare">
 <h2>Сравнительная таблица тарифов</h2>
-<p class="section-sub">Все цены указаны за начальный тариф при помесячной оплате (если не указано иное). Данные актуальны на февраль 2026.</p>
+<p class="section-sub">Начальные тарифы. Цены при помесячной оплате (кроме Beget - указана годовая). Февраль 2026.</p>
 <div class="table-wrap">
 <table class="compare-table">
 <thead>
-<tr>
-<th>#</th>
-<th>Провайдер</th>
-<th>Цена от</th>
-<th>Диск</th>
-<th>Сайтов</th>
-<th>SSL</th>
-<th>NVMe</th>
-<th>Тест</th>
-<th>Панель</th>
-</tr>
+<tr><th>#</th><th>Провайдер</th><th>Цена</th><th>Диск</th><th>Сайтов</th><th>SSL</th><th>NVMe</th><th>Тест</th><th>memory_limit</th><th>Панель</th></tr>
 </thead>
 <tbody>
-<tr><td>1</td><td>Timeweb</td><td>180 &#8381;</td><td>10 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>10 дней</td><td>Своя</td></tr>
-<tr><td>2</td><td>Beget</td><td>165 &#8381;*</td><td>4 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>30 дней</td><td>Своя</td></tr>
-<tr><td>3</td><td>SpaceWeb</td><td>99 &#8381;</td><td>1 ГБ</td><td>3</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>3 дня</td><td>Своя</td></tr>
-<tr><td>4</td><td>REG.ru</td><td>129 &#8381;</td><td>3 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-cross">Нет</td><td>14 дней</td><td>ISPmanager</td></tr>
-<tr><td>5</td><td>AdminVPS</td><td>59 &#8381;</td><td>2 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>3 дня</td><td>ISPmanager</td></tr>
-<tr><td>6</td><td>Спринтхост</td><td>149 &#8381;</td><td>5 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>14 дней</td><td>ISPmanager</td></tr>
-<tr><td>7</td><td>Макхост</td><td>232 &#8381;</td><td>3 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>14 дней</td><td>cPanel</td></tr>
-<tr><td>8</td><td>FirstVDS</td><td>139 &#8381;</td><td>10 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>3 дня</td><td>ISPmanager</td></tr>
-<tr><td>9</td><td>Джино</td><td>208 &#8381;</td><td>гибко</td><td>гибко</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>есть</td><td>Своя</td></tr>
-<tr><td>10</td><td>Fornex</td><td>2.5 &euro;</td><td>5 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>3 дня</td><td>cPanel</td></tr>
-<tr><td>11</td><td>Fozzy</td><td>$3.49</td><td>10 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>7 дней</td><td>cPanel</td></tr>
-<tr><td>12</td><td>Hostinger</td><td>$2.49</td><td>50 ГБ</td><td>1</td><td class="tbl-check">Да</td><td class="tbl-check">Да</td><td>30 дней возврат</td><td>hPanel</td></tr>
+<tr><td>1</td><td>Timeweb</td><td>180 &#8381;</td><td>10 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>10 дн</td><td>1024M</td><td>Своя</td></tr>
+<tr><td>2</td><td>Beget</td><td>165 &#8381;*</td><td>4 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>30 дн</td><td>256M</td><td>Своя</td></tr>
+<tr><td>3</td><td>SpaceWeb</td><td>99 &#8381;</td><td>1 ГБ</td><td>3</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>3 дн</td><td>256M</td><td>Своя</td></tr>
+<tr><td>4</td><td>REG.ru</td><td>129 &#8381;</td><td>3 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-n">Нет</td><td>14 дн</td><td>256M</td><td>ISPm</td></tr>
+<tr><td>5</td><td>AdminVPS</td><td>59 &#8381;</td><td>2 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>3 дн</td><td>512M</td><td>ISPm</td></tr>
+<tr><td>6</td><td>Спринтхост</td><td>149 &#8381;</td><td>5 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>14 дн</td><td>256M</td><td>ISPm</td></tr>
+<tr><td>7</td><td>Макхост</td><td>232 &#8381;</td><td>3 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>14 дн</td><td>256M</td><td>Своя</td></tr>
+<tr><td>8</td><td>FirstVDS</td><td>139 &#8381;</td><td>10 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>3 дн</td><td>256M</td><td>ISPm</td></tr>
+<tr><td>9</td><td>Джино</td><td>208 &#8381;</td><td>гибко</td><td>гибко</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>есть</td><td>гибко</td><td>Своя</td></tr>
+<tr><td>10</td><td>Fornex</td><td>2.5 &euro;</td><td>5 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>3 дн</td><td>256M</td><td>cPanel</td></tr>
+<tr><td>11</td><td>Fozzy</td><td>$3.49</td><td>10 ГБ</td><td>1</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>7 дн</td><td>256M</td><td>cPanel</td></tr>
+<tr><td>12</td><td>Евробайт</td><td>159 &#8381;</td><td>безлим</td><td>безлим</td><td class="tbl-y">Да</td><td class="tbl-y">Да</td><td>нет</td><td>256M</td><td>ISPm</td></tr>
 </tbody>
 </table>
 </div>
-<p style="font-size:13px;color:var(--text3);margin-top:8px">* При оплате за год. Помесячная стоимость обычно на 20-30% выше.</p>
+<p style="font-size:13px;color:var(--text3);margin-top:6px">* При оплате за год. Помесячно на 20-30% дороже.</p>
 </section>
 
+<!-- ==================== GUIDE ==================== -->
 <section id="guide">
 <h2>Как выбрать хостинг для сайта</h2>
 <div class="article-block">
-<p>Прежде чем заказывать тариф, стоит определиться с задачами. Небольшой блог на WordPress, корпоративная визитка и интернет-магазин на тысячу позиций предъявляют совершенно разные требования к серверным ресурсам.</p>
+<p>Прежде чем заказывать тариф, определитесь с задачами. Небольшой блог на WordPress, корпоративная визитка и интернет-магазин на тысячу позиций предъявляют совершенно разные требования к серверным ресурсам.</p>
 
 <h3>Тип проекта и нагрузка</h3>
-<p>Для сайта-визитки или лендинга хватит самого простого тарифа с 1-3 ГБ дискового пространства. Блог на WordPress или портфолио комфортно работают на тарифах от 5 ГБ с поддержкой PHP 8.x и MySQL. Интернет-магазин на OpenCart, WooCommerce или 1С-Битрикс потребует не менее 10 ГБ, а при большом каталоге товаров и фотографий - 20-50 ГБ.</p>
+<p>Для визитки или лендинга хватит тарифа с 1-3 ГБ диска. Блог на WordPress комфортно работает при 5 ГБ с PHP 8.x и MySQL. Интернет-магазин на WooCommerce или 1С-Битрикс потребует от 10 ГБ, а при большом каталоге - 20-50 ГБ. Не забывайте про резервные копии: они тоже занимают место.</p>
 
 <h3>Расположение дата-центра</h3>
-<p>Если основная аудитория находится в России, выбирайте провайдера с серверами в Москве или Санкт-Петербурге. Это сокращает время отклика до 10-30 мс. Для проектов на зарубежную аудиторию подойдут европейские площадки: Нидерланды, Германия, Финляндия. Близость серверов к посетителям напрямую влияет на скорость загрузки страниц и на позиции в поисковых системах.</p>
+<p>Если аудитория из России, берите серверы в Москве или Петербурге - это 10-30 мс отклика. Для зарубежных проектов подойдет Европа: Нидерланды, Германия, Финляндия. Расстояние от сервера до посетителя напрямую влияет на скорость загрузки и, как следствие, на позиции в поисковых системах.</p>
 
 <h3>Панель управления</h3>
-<p>Три основных варианта: cPanel, ISPmanager и собственные панели провайдеров. cPanel считается мировым стандартом и знакома большинству вебмастеров. ISPmanager разработан в России и отлично работает с русскоязычными сайтами. Собственные панели Timeweb и Beget по функциональности не уступают коммерческим решениям, при этом включены в стоимость тарифа без доплат.</p>
+<p>Три варианта: cPanel (мировой стандарт, есть у REG.ru, Fornex, Fozzy), ISPmanager (российская разработка, у AdminVPS, Спринтхост, FirstVDS) и собственные панели (Timeweb, Beget, SpaceWeb, Джино). Первые две знакомы вебмастерам, третьи - бесплатные и часто не уступают по функциональности.</p>
 
-<h3>Техническая поддержка</h3>
-<p>Хорошая поддержка экономит часы нервов, особенно если вы не системный администратор. Обратите внимание на время ответа: у лидеров рейтинга это 5-15 минут в тикетах и мгновенный ответ по телефону. Проверьте, работает ли поддержка ночью и в выходные. У большинства провайдеров из нашего списка поддержка доступна 24/7.</p>
+<h3>Техподдержка</h3>
+<p>Проверяйте время ответа и часы работы. У Timeweb среднее время - 5-10 минут. У Beget 85% тикетов закрывают менее чем за полчаса. AdminVPS включает бесплатное администрирование. А вот у Макхост и Джино поддержка работает медленнее. Напишите пробный вопрос в чат до покупки - это лучший тест.</p>
 
 <h3>Масштабируемость</h3>
-<p>Хороший хостер позволяет без проблем перейти на более мощный тариф, когда проект вырастет. В идеале переход происходит в пару кликов из личного кабинета, без простоев и переноса файлов. Timeweb, Beget и SpaceWeb реализуют это через мгновенное повышение тарифа. Если в будущем понадобится VPS или выделенный сервер, удобнее оставаться у того же провайдера.</p>
+<p>Хороший хостер дает повысить тариф в пару кликов, без простоя и переноса файлов. Если в будущем понадобится VPS или выделенный сервер, удобнее оставаться у того же провайдера - Timeweb, Beget, REG.ru и SpaceWeb предлагают всю линейку от shared до dedicated.</p>
 
-<h3>Бэкапы и безопасность</h3>
-<p>Автоматическое резервное копирование должно быть на каждом тарифе. У Beget бэкапы делаются ежедневно и хранятся 30 дней. У Timeweb частота зависит от тарифного плана. Бесплатный SSL-сертификат от Let's Encrypt давно стал стандартом, и все провайдеры из рейтинга его предоставляют. Дополнительный плюс - встроенный антивирус и защита от DDoS-атак.</p>
-
-<div class="hint">Совет: перед покупкой воспользуйтесь тестовым периодом. У Beget это 30 дней, у Спринтхост и Макхост - 14 дней. Этого времени хватит, чтобы перенести сайт и проверить скорость работы в реальных условиях.</div>
+<div class="hint">Совет: воспользуйтесь тестовыми периодами. У Beget это 30 дней без ограничений, у Спринтхост и Макхост - 14 дней. Загрузите рабочий сайт, проверьте скорость и панель, напишите в поддержку.</div>
 </div>
 </section>
 
+<!-- ==================== PHP / WORDPRESS DEEP DIVE ==================== -->
+<section id="php">
+<h2>PHP-лимиты, Redis, Memcached - технические детали</h2>
+<div class="article-block">
+<p>Этот раздел для тех, кому важны конкретные цифры, а не маркетинговые обещания. Два главных параметра PHP, которые влияют на работу сайта - это memory_limit (сколько оперативной памяти может использовать один скрипт) и max_execution_time (сколько секунд скрипт может выполняться, прежде чем сервер его принудительно остановит).</p>
+
+<h3>Timeweb: PHP-конфигурация по тарифам</h3>
+<p>На тарифах Year+, Optimo+, Century+, Millennium+ и обычных CMS-тарифах: memory_limit 1024 МБ, max_execution_time 800 секунд, proxy_send_timeout 800 секунд. Это одни из самых щедрых лимитов на рынке виртуального хостинга.</p>
+<p>На тарифах Мощный хостинг (1 Гб), Eterno, CMS Pro и Premium: memory_limit 2048 МБ, max_execution_time 1000 секунд. Apache работает в режиме mpm_prefork вместо mpm_itk, что дает больше изоляции процессов. На Eterno и Premium также доступны 6 PHP-воркеров (3 одновременных).</p>
+<p>Redis и Memcached у Timeweb доступны только на тарифах Eterno и Premium. На стартовых тарифах Year+/Optimo+ их нет, и это важно учитывать при выборе. Если ваш WordPress-сайт использует плагин Redis Object Cache для ускорения - вам нужен тариф не ниже Eterno.</p>
+
+<h3>Beget: PHP-конфигурация</h3>
+<p>По умолчанию: memory_limit 256 МБ, max_execution_time 600 секунд. Это в 4 раза меньше по памяти, чем у Timeweb на стартовом тарифе. Для простого блога на WordPress этого хватает, но для WooCommerce с 500+ товарами или для 1С-Битрикс может быть мало.</p>
+<p>Поднять memory_limit можно вручную через .htaccess:</p>
+<div class="code-hint">php_value memory_limit 512M</div>
+<p>Redis у Beget подключается как отдельный персональный сервер от 2 рублей в день (около 60 руб/мес). Memcached - аналогично от 2 руб/день. Sphinx для полнотекстового поиска - от 2 руб/день. Все три сервиса запускаются из панели управления в пару кликов. Важно: это именно персональные инстансы, а не разделяемые между клиентами, что дает стабильную производительность.</p>
+
+<h3>Как Redis ускоряет WordPress</h3>
+<p>Без кэширования каждый визит генерирует запросы к базе данных MySQL. На средней странице WordPress это 20-50 запросов. Redis хранит результаты этих запросов в оперативной памяти и отдает их за микросекунды вместо миллисекунд. На практике это ускорение загрузки в 2-5 раз и снижение нагрузки на CPU.</p>
+<p>Для подключения Redis на Beget: установите плагин Redis Object Cache, в wp-config.php добавьте:</p>
+<div class="code-hint">define('WP_REDIS_HOST', '127.0.0.1');<br>define('WP_REDIS_PORT', 6379);</div>
+<p>Конкретные значения хоста и порта выдает панель управления Beget при активации сервиса.</p>
+<p>У Timeweb на тарифах Eterno/Premium Redis включен в стоимость, отдельно активировать ничего не нужно - достаточно включить плагин в WordPress.</p>
+
+<h3>Что выбрать для WordPress</h3>
+<p>Если бюджет ограничен и нужен максимум из коробки - Timeweb (Year+ или Optimo+): memory_limit 1024 МБ, 800 сек тайм-аут, автоустановка WordPress. Если нужен Redis и готовы чуть доплатить - Beget с подключением Redis за 2 руб/день. Для тяжелого WooCommerce с 1000+ товаров - Timeweb Eterno (2048 МБ, Redis в комплекте) или Beget с поднятым memory_limit и персональным Redis.</p>
+
+<h3>1С-Битрикс: сертификация провайдеров</h3>
+<p>Для корректной работы Битрикс-платформы провайдер должен пройти сертификацию. Из нашего рейтинга сертифицированы Timeweb (тарифы CMS Bitrix и Eterno), REG.ru и Спринтхост. Они гарантируют прохождение встроенного теста производительности монитора качества. На несертифицированных площадках Битрикс может работать, но при проблемах техподдержка вендора откажет в помощи.</p>
+</div>
+</section>
+
+<!-- ==================== TYPES ==================== -->
 <section id="types">
 <h2>Виды хостинга: что подойдет вашему проекту</h2>
 <div class="article-block">
 <h3>Виртуальный (shared) хостинг</h3>
-<p>Самый распространенный и бюджетный вариант. Ваш сайт размещается на сервере вместе с сотнями других проектов, а ресурсы распределяются между ними. Провайдер полностью отвечает за обслуживание сервера: обновление ПО, настройку безопасности, мониторинг. Вам остается загрузить файлы сайта и настроить домен. Этого достаточно для 90% сайтов с посещаемостью до 10 000-30 000 человек в сутки.</p>
+<p>Самый распространенный и бюджетный вариант. Ваш сайт размещен на сервере вместе с сотнями других проектов, ресурсы распределяются между ними. Провайдер отвечает за все: обновление ПО, безопасность, мониторинг. Вам остается загрузить файлы и настроить домен. Подходит для 90% сайтов с посещаемостью до 10 000-30 000 человек в сутки.</p>
 
 <h3>VPS / VDS</h3>
-<p>Виртуальный выделенный сервер. Вы получаете изолированную часть физического сервера с гарантированными ресурсами: процессором, оперативной памятью, диском. Есть полный root-доступ, можно ставить любое ПО и настраивать сервер под себя. Подходит для крупных проектов, высоконагруженных приложений и тех случаев, когда виртуальный хостинг уже не справляется.</p>
+<p>Изолированная часть физического сервера с гарантированными ресурсами. Полный root-доступ, можно устанавливать любое ПО. Нужен для крупных проектов, нагруженных приложений и случаев, когда shared-тариф уже не справляется. Цена от 150-300 рублей в месяц.</p>
 
-<h3>Выделенный сервер (dedicated)</h3>
-<p>Отдельная физическая машина целиком в вашем распоряжении. Максимальная производительность и полный контроль, но и максимальная цена: от 5 000-10 000 рублей в месяц. Нужен для очень крупных проектов с миллионами посетителей, для работы с большими базами данных или для специфических задач вроде видеостриминга.</p>
+<h3>Выделенный сервер</h3>
+<p>Физическая машина целиком в вашем распоряжении. Максимальная производительность, но и максимальная цена: от 5 000-10 000 рублей. Нужен для очень крупных проектов, видеостриминга, игровых серверов.</p>
 
 <h3>Облачный хостинг</h3>
-<p>Ресурсы распределены между несколькими серверами в облаке. Если один из них выходит из строя, нагрузка автоматически переключается на другой. Оплата обычно поминутная или почасовая, за фактически потребленные ресурсы. Timeweb Cloud, Selectel и другие предлагают облачные решения от 200-300 рублей в месяц.</p>
+<p>Ресурсы распределены между несколькими серверами. Если один выходит из строя, нагрузка переключается на другой. Оплата за фактическое потребление. Timeweb Cloud, Selectel и другие предлагают облачные решения от 200-300 рублей.</p>
 </div>
 </section>
 
-<section id="wordpress">
-<h2>Хостинг для WordPress и других CMS</h2>
-<div class="article-block">
-<p>WordPress занимает более 40% всех сайтов в интернете, и большинство провайдеров оптимизируют свои серверы под эту систему управления контентом. При выборе тарифа для WordPress обратите внимание на поддержку PHP версии 8.0 и выше, наличие MySQL 5.7+ или MariaDB, и объем оперативной памяти на процесс (не менее 256 МБ).</p>
-
-<p>Timeweb и REG.ru предлагают специализированные CMS-тарифы, где WordPress уже предустановлен и оптимизирован. На таких тарифах включен кэш на уровне сервера, что ускоряет загрузку страниц без дополнительных плагинов. Beget позволяет установить WordPress в один клик из панели управления и подключить Redis для кэширования.</p>
-
-<p>Для 1С-Битрикс требования строже: провайдер должен быть сертифицирован компанией Битрикс. Из нашего рейтинга это Timeweb, REG.ru и Спринтхост. Они гарантируют совместимость серверного окружения с требованиями платформы и прохождение встроенного теста производительности.</p>
-
-<p>Joomla, Drupal, MODX и другие системы менее требовательны к ресурсам и нормально работают на стандартных тарифах любого провайдера из списка. Главное - наличие PHP нужной версии и достаточный объем базы данных MySQL.</p>
-
-<div class="hint">Совет: при установке WordPress сразу подключите SSL, настройте ЧПУ-ссылки и установите плагин кэширования. Это ускорит загрузку и улучшит позиции в поисковых системах.</div>
-</div>
-</section>
-
+<!-- ==================== SPEED ==================== -->
 <section id="speed">
-<h2>На что влияет скорость хостинга</h2>
+<h2>Скорость хостинга и её влияние на SEO</h2>
 <div class="article-block">
-<p>Скорость загрузки сайта зависит от множества факторов, и хостинг играет в этом ключевую роль. По данным Google, если страница загружается дольше 3 секунд, 53% мобильных пользователей покидают ее. А каждая дополнительная секунда загрузки снижает конверсию на 7%.</p>
+<p>По данным Google, если страница загружается дольше 3 секунд, 53% мобильных посетителей уходят. Каждая дополнительная секунда снижает конверсию на 7%. Хостинг - ключевой фактор, на который вы можете повлиять.</p>
 
-<p>Тип дисковых накопителей напрямую влияет на скорость отдачи файлов и выполнения запросов к базе данных. NVMe-диски работают в 5-7 раз быстрее обычных SSD, и это ощутимо на практике: страницы WordPress на NVMe открываются за 0.3-0.8 секунды вместо 1-2 секунд на обычных SSD.</p>
+<p>NVMe-диски работают в 5-7 раз быстрее обычных SSD. Страницы WordPress на NVMe открываются за 0.3-0.8 секунды вместо 1-2 секунд. Почти все провайдеры из рейтинга перешли на NVMe, исключение - эконом-тарифы REG.ru, где стоят обычные SSD.</p>
 
-<p>Объем оперативной памяти, выделенной на ваш аккаунт, определяет, сколько одновременных запросов сервер обработает без задержек. На бюджетных тарифах память ограничена 256-512 МБ, что достаточно для сайта с посещаемостью до 1 000-3 000 человек в сутки. При большей нагрузке стоит переходить на старшие тарифы или VPS.</p>
+<p>Объем оперативной памяти определяет, сколько одновременных запросов сервер обработает без задержек. На бюджетных тарифах это 256-512 МБ на аккаунт, чего хватает до 1 000-3 000 посетителей в сутки.</p>
 
-<p>Расстояние от сервера до посетителя тоже имеет значение. Если ваши клиенты в Москве, а сервер в Нидерландах, каждый запрос проходит лишние 2 000-3 000 км, что добавляет 20-40 мс к времени отклика. Для российской аудитории выбирайте дата-центры в Москве или Санкт-Петербурге.</p>
+<p>Расстояние до сервера добавляет 20-40 мс к времени отклика на каждые 2 000-3 000 км. Для российской аудитории - ЦОДы в Москве или Петербурге.</p>
 </div>
 </section>
 
+<!-- ==================== PROS/CONS ==================== -->
 <section id="proscons">
-<h2>Плюсы и минусы виртуального хостинга</h2>
+<h2>Плюсы и минусы shared-хостинга</h2>
 <div class="pros-cons">
 <div class="pros">
 <h3>Преимущества</h3>
-<p>Низкая цена: от 59-180 рублей в месяц. Не нужно разбираться в настройке сервера. Техподдержка решает большинство технических вопросов. Быстрый старт: сайт можно запустить за 15-30 минут. Бесплатный SSL и автоматические бэкапы. Автоустановка популярных CMS. Удобные панели управления. Бесплатный перенос с другого хостинга.</p>
+<p>Низкая цена: от 59-180 руб/мес. Не нужно разбираться в настройке серверов. Техподдержка решает большинство вопросов. Быстрый старт за 15-30 минут. Бесплатный SSL, автобэкапы, автоустановка CMS. Удобные панели управления. Бесплатный перенос с другого хостера.</p>
 </div>
 <div class="cons">
 <h3>Недостатки</h3>
-<p>Ограниченные ресурсы: процессор и память делятся между клиентами. Нет root-доступа: нельзя установить произвольное ПО. "Соседи" по серверу могут влиять на производительность. Лимиты на количество процессов, потребление CPU и памяти. Некоторые провайдеры ограничивают исходящие соединения. Не подходит для высоконагруженных приложений.</p>
+<p>Ресурсы делятся между клиентами - "шумный сосед" может затормозить ваш сайт. Нет root-доступа: нельзя поставить произвольное ПО. Лимиты на CPU, память, процессы. AdminVPS, например, строго следит за CPU-лимитами и предлагает перейти на дорогой тариф при превышении. Не подходит для высоконагруженных приложений.</p>
 </div>
 </div>
 </section>
 
+<!-- ==================== TRANSFER ==================== -->
 <section id="transfer">
 <h2>Как перенести сайт на новый хостинг</h2>
 <div class="article-block">
-<p>Перенос сайта между провайдерами кажется сложной задачей, но на практике процедура отработана и занимает от пары часов до суток. Порядок действий зависит от того, переносите вы сайт самостоятельно или пользуетесь помощью нового хостера.</p>
+<h3>Шаг 1. Резервная копия</h3>
+<p>Скачайте файлы через FTP (FileZilla, WinSCP) или файловый менеджер. Экспортируйте базу MySQL через phpMyAdmin. Сохраните оба архива локально.</p>
 
-<h3>Шаг 1. Создайте резервную копию</h3>
-<p>Скачайте файлы сайта через FTP-клиент (FileZilla, WinSCP) или файловый менеджер в панели управления. Отдельно экспортируйте базу данных MySQL через phpMyAdmin. Сохраните оба архива на компьютере.</p>
+<h3>Шаг 2. Загрузите на новый хостинг</h3>
+<p>Оплатите тариф, создайте сайт в панели, загрузите файлы в корневую директорию. Создайте базу данных, импортируйте дамп, поправьте wp-config.php (для WordPress).</p>
 
-<h3>Шаг 2. Закажите новый хостинг и загрузите файлы</h3>
-<p>Оплатите тариф у нового провайдера, создайте сайт в панели управления, загрузите файлы в корневую директорию (обычно public_html или www). Создайте базу данных, импортируйте дамп через phpMyAdmin, поправьте настройки подключения в конфигурационном файле сайта (wp-config.php для WordPress).</p>
+<h3>Шаг 3. Проверьте работу</h3>
+<p>Большинство хостеров выдают технический адрес для проверки до смены DNS. Откройте сайт по нему и убедитесь, что все работает.</p>
 
-<h3>Шаг 3. Проверьте работоспособность</h3>
-<p>Большинство хостеров выдают технический адрес для проверки до смены DNS. Откройте сайт по этому адресу и убедитесь, что все работает корректно: страницы открываются, формы отправляются, изображения загружаются.</p>
+<h3>Шаг 4. Смените DNS</h3>
+<p>Пропишите новые NS-серверы или A-запись у регистратора домена. Обновление DNS занимает от 15 минут до 48 часов, в среднем 2-4 часа.</p>
 
-<h3>Шаг 4. Смените DNS-записи</h3>
-<p>В панели управления доменом (у регистратора) пропишите новые NS-серверы или A-запись, которую выдал новый хостер. Обновление DNS занимает от 15 минут до 48 часов, в среднем 2-4 часа. В это время сайт может открываться то со старого, то с нового сервера.</p>
-
-<h3>Бесплатный перенос силами хостера</h3>
-<p>Beget, Timeweb, SpaceWeb и большинство других провайдеров предлагают бесплатный перенос сайта. Достаточно заполнить форму с доступами к старому хостингу, и специалисты сделают все за вас. Это самый простой вариант, который рекомендуем новичкам.</p>
+<h3>Или просто попросите хостера</h3>
+<p>Beget, Timeweb, SpaceWeb и другие предлагают бесплатный перенос. Заполните форму с доступами к старому хостингу - специалисты сделают все за вас. Для новичков это лучший вариант.</p>
 </div>
 </section>
 
+<!-- ==================== FAQ ==================== -->
 <section id="faq">
 <h2>Часто задаваемые вопросы</h2>
 <p class="section-sub">Ответы на популярные вопросы о выборе и использовании хостинга.</p>
 
-<div class="faq-item">
-<div class="faq-q">Какой хостинг лучше выбрать для сайта в 2026 году?</div>
-<div class="faq-a">Для большинства задач подойдут Timeweb или Beget. Оба провайдера предлагают стабильную работу, удобные панели управления, бесплатный SSL и круглосуточную поддержку. Timeweb чуть дешевле на стартовых тарифах, а Beget выделяется 30-дневным тестовым периодом.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Какой хостинг лучше выбрать в 2026 году?</div><div class="faq-a">Для большинства задач подойдут Timeweb или Beget. Timeweb дешевле на стартовых тарифах и дает memory_limit 1024 МБ из коробки. Beget выигрывает 30-дневным бесплатным тестом и изоляцией аккаунтов.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Сколько стоит хостинг для сайта?</div>
-<div class="faq-a">Средняя стоимость виртуального хостинга у российских провайдеров составляет от 99 до 400 рублей в месяц. Начальные тарифы SpaceWeb стартуют от 99 руб/мес, AdminVPS от 59 руб/мес, Beget от 165 руб/мес при оплате за год. При оплате помесячно цена обычно выше на 20-30%.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Сколько стоит хостинг для сайта?</div><div class="faq-a">От 59 до 400 рублей в месяц у российских провайдеров. AdminVPS от 59 руб, SpaceWeb от 99 руб, REG.ru от 129 руб, Beget от 165 руб (при оплате за год). Средняя цена качественного тарифа - 200-300 рублей.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Чем виртуальный хостинг отличается от VPS?</div>
-<div class="faq-a">На виртуальном хостинге ваш сайт делит ресурсы сервера с другими клиентами, при этом провайдер берет на себя все техническое обслуживание. VPS предоставляет выделенные ресурсы и полный root-доступ, но требует навыков администрирования. Для сайтов-визиток, блогов и небольших магазинов виртуального хостинга более чем достаточно.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Чем shared-хостинг отличается от VPS?</div><div class="faq-a">На shared вы делите ресурсы с другими, провайдер все обслуживает за вас. VPS дает выделенные ресурсы и root-доступ, но требует навыков администрирования. Для сайтов-визиток, блогов и небольших магазинов shared более чем достаточно.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Какой хостинг подходит для WordPress?</div>
-<div class="faq-a">Практически все крупные российские провайдеры поддерживают WordPress. Timeweb, Beget и REG.ru предлагают автоустановку CMS. Для комфортной работы WordPress достаточно тарифа с 1 ГБ дискового пространства, PHP 8.x и базой данных MySQL. Некоторые хостеры имеют отдельные CMS-тарифы с предустановленными оптимизациями.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Какой хостинг подходит для WordPress?</div><div class="faq-a">Timeweb (memory_limit 1024 МБ, автоустановка), Beget (Redis от 2 руб/день, 30 дней тест) и REG.ru (CMS-тарифы). Для комфортной работы нужен PHP 8.x, MySQL 5.7+ и минимум 256 МБ памяти на скрипт.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Нужен ли SSL-сертификат и дают ли его бесплатно?</div>
-<div class="faq-a">SSL обязателен для любого сайта: без него браузеры показывают предупреждение о небезопасном соединении, а поисковики понижают позиции. Большинство провайдеров из нашего рейтинга предоставляют бесплатный SSL-сертификат Let's Encrypt, который продлевается автоматически.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Что такое Redis и Memcached?</div><div class="faq-a">Системы кэширования данных в оперативной памяти. Redis хранит результаты запросов к MySQL и отдает их за микросекунды. На Beget персональный Redis от 2 руб/день. У Timeweb Redis доступен на тарифах Eterno и Premium.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Можно ли перенести сайт на другой хостинг без потерь?</div>
-<div class="faq-a">Да, перенос сайта между провайдерами стал стандартной процедурой. Beget, Timeweb, SpaceWeb и другие предлагают бесплатный перенос силами технической поддержки. Обычно процесс занимает от нескольких часов до суток, при этом сайт продолжает работать у старого хостера до завершения переноса DNS.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Какие PHP-лимиты важны?</div><div class="faq-a">Два ключевых: memory_limit (память на скрипт) и max_execution_time (тайм-аут). У Timeweb это 1024 МБ / 800 сек на стартовых тарифах. У Beget по умолчанию 256 МБ / 600 сек, но можно поднять через .htaccess.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Какой хостинг подходит для интернет-магазина?</div>
-<div class="faq-a">Для интернет-магазина важны скорость загрузки, стабильность и наличие SSL. Подойдут тарифы среднего уровня у Timeweb, Beget или REG.ru с NVMe-дисками и объемом от 10 ГБ. Если магазин работает на 1С-Битрикс, обратите внимание на сертифицированные тарифы Timeweb и REG.ru.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Нужен ли SSL-сертификат?</div><div class="faq-a">Обязателен. Без него браузеры показывают предупреждение, поисковики понижают позиции. Все провайдеры из рейтинга дают бесплатный Let's Encrypt с автопродлением.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Что такое NVMe и зачем он на хостинге?</div>
-<div class="faq-a">NVMe - это тип твердотельного накопителя, который работает в несколько раз быстрее обычного SSD. На практике это означает более быструю загрузку страниц, ускоренную работу баз данных и лучший отклик сайта. Сейчас большинство крупных провайдеров перешли на NVMe-диски даже на бюджетных тарифах.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Какой хостинг подходит для интернет-магазина?</div><div class="faq-a">Тарифы среднего уровня у Timeweb, Beget или REG.ru с NVMe и объемом от 10 ГБ. Для 1С-Битрикс нужны сертифицированные тарифы (Timeweb, REG.ru, Спринтхост). Для WooCommerce - memory_limit от 512 МБ и Redis.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Бывает ли бесплатный хостинг?</div>
-<div class="faq-a">Бесплатный хостинг существует, например, у Beget есть тестовый тариф на 30 дней. Однако бесплатные решения на постоянной основе имеют серьезные ограничения: мало дискового пространства, нет поддержки, медленная работа, навязчивая реклама. Для серьезного проекта лучше выбрать платный тариф от 99-150 рублей в месяц.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Бывает ли бесплатный хостинг?</div><div class="faq-a">У Beget есть полноценный тест на 30 дней. Бесплатные решения на постоянной основе имеют жесткие ограничения: мало диска, нет поддержки, реклама. Для серьезного проекта берите платный от 99-150 рублей.</div></div>
 
-<div class="faq-item">
-<div class="faq-q">Как часто нужно делать бэкапы сайта?</div>
-<div class="faq-a">Резервные копии желательно создавать ежедневно. Все провайдеры из нашего рейтинга выполняют автоматическое резервное копирование, но периодичность различается: у Beget бэкапы делаются ежедневно и хранятся 30 дней, у Timeweb частота зависит от тарифа. Дополнительно рекомендуется хранить собственную копию сайта отдельно от хостинга.</div>
-</div>
+<div class="faq-item"><div class="faq-q">Как часто делать резервные копии?</div><div class="faq-a">Ежедневно. У Beget бэкапы ежедневные, хранятся 30 дней. У Timeweb частота зависит от тарифа. Дополнительно храните свою копию отдельно - например, на Яндекс.Диске или Google Drive.</div></div>
 </section>
 
+<!-- ==================== SEO CLOSE ==================== -->
 <section>
-<h2>Подведем итоги</h2>
+<h2>Итоги</h2>
 <div class="article-block">
-<p>Российский рынок виртуального хостинга в 2026 году предлагает десятки качественных решений на любой бюджет. Конкуренция среди провайдеров работает на руку клиентам: цены снижаются, а качество растет. NVMe-диски, бесплатные SSL-сертификаты, круглосуточная техподдержка и автоматические бэкапы стали стандартом отрасли.</p>
+<p>Рынок виртуального хостинга в России в 2026 году дает десятки достойных вариантов. NVMe-диски, бесплатные SSL-сертификаты, круглосуточная поддержка и автобэкапы стали стандартом. Конкуренция работает на пользу клиентов.</p>
 
-<p>При выборе отталкивайтесь от задач вашего проекта. Для первого сайта, блога или визитки хватит тарифа от 99 до 200 рублей в месяц у Timeweb, Beget или SpaceWeb. Для интернет-магазина или корпоративного портала берите тариф повыше с NVMe-дисками и большим объемом хранилища. Если нужен полный контроль и root-доступ, переходите на VPS.</p>
+<p>Для первого сайта, блога или визитки хватит тарифа от 99 до 200 рублей у Timeweb, Beget или SpaceWeb. Для магазина на WooCommerce или Битрикс берите тариф с NVMe, memory_limit от 512 МБ и Redis. Если нужен полный контроль - переходите на VPS.</p>
 
-<p>Не забывайте пользоваться тестовыми периодами. Они бесплатные и ни к чему не обязывают. Загрузите сайт, проверьте скорость, потыкайте панель управления, напишите в поддержку пару вопросов. Только личный опыт покажет, какой провайдер подойдет именно вам.</p>
+<p>Не пренебрегайте тестовыми периодами. Загрузите рабочий сайт, проверьте скорость, панель управления, напишите в техподдержку. Только реальный опыт покажет, какой провайдер подойдет вашему проекту.</p>
 </div>
 </section>
 
 <div class="cta-block">
 <h2>Выберите хостинг для своего проекта</h2>
-<p>Все провайдеры из рейтинга предлагают тестовые периоды. Попробуйте бесплатно и решите сами.</p>
-<a href="#rating" class="cta-btn">Перейти к рейтингу</a>
+<p>Все провайдеры предлагают тестовые периоды. Попробуйте бесплатно.</p>
+<a href="#rating" class="cta-btn">К рейтингу</a>
 </div>
 
 </div>
@@ -649,24 +716,14 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:30px 20p
 <footer>
 <div class="wrap">
 <p>rejting-hostingov.vercel.app &copy; 2026. Рейтинг хостингов для сайта в России.</p>
-<p style="margin-top:8px">Информация носит справочный характер. Цены и условия могут измениться. Уточняйте актуальные данные на сайтах провайдеров.</p>
-<p style="margin-top:8px">Дата обновления: февраль 2026</p>
+<p style="margin-top:6px">Информация носит справочный характер. Цены могут измениться. Проверяйте на сайтах провайдеров.</p>
+<p style="margin-top:6px">Дата обновления: февраль 2026</p>
 </div>
 </footer>
 
 <script>
-document.querySelectorAll('.faq-q').forEach(function(q){
-q.addEventListener('click',function(){
-this.parentElement.classList.toggle('open');
-});
-});
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-a.addEventListener('click',function(e){
-var t=document.querySelector(this.getAttribute('href'));
-if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
-});
-});
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open')})});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
 </script>
 </body>
 </html>
-
