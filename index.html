@@ -25,9 +25,9 @@ a:hover{text-decoration:underline}
 .nav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
 .nav-logo{display:flex;align-items:center}
 .nav-logo img{height:56px;width:auto}
-.nav-links{display:flex;gap:20px;font-size:14px}
-.nav-links a{color:var(--text2);font-weight:500}
-.nav-links a:hover{color:var(--accent);text-decoration:none}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.burger svg{width:26px;height:26px;stroke:var(--text);stroke-width:2}
+.nav-links.open{display:flex!important}
 .hero{padding:100px 20px 48px;text-align:center;background:linear-gradient(180deg,var(--accentLight) 0%,var(--bg) 100%)}
 .hero-badge{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px}
 .hero h1{font-size:clamp(24px,4.5vw,38px);font-weight:800;line-height:1.25;color:var(--text);margin-bottom:14px;letter-spacing:-.4px}
@@ -110,11 +110,17 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:28px 20p
 .toc a{display:block;padding:4px 0;color:var(--accent);font-size:14px}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 @media(max-width:768px){
-.nav-links{display:none}
+.nav-links{display:none;position:absolute;top:56px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;padding:12px 24px;gap:10px;box-shadow:var(--shadow2)}
+.burger{display:block}
 .stats{grid-template-columns:repeat(2,1fr)}
-.r-card-top{flex-direction:column;align-items:flex-start;gap:10px}
-.r-price-block{align-items:flex-start;text-align:left}
+.r-card-top{display:grid;grid-template-columns:38px 1fr;grid-template-rows:auto auto;gap:8px 12px;align-items:center}
+.r-badge{grid-row:1;grid-column:1}
+.r-name{grid-row:1;grid-column:2;font-size:18px;white-space:nowrap}
+.r-stars{grid-row:2;grid-column:1/3}
+.r-price-block{grid-row:3;grid-column:1/3;align-items:flex-start;text-align:left}
 .pros-cons{grid-template-columns:1fr}
+.r-card-bottom{flex-direction:column}
+.btn-primary,.btn-outline{width:100%;justify-content:center}
 }
 </style>
 <script type="application/ld+json">
@@ -141,14 +147,17 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:28px 20p
 
 <nav class="nav">
 <div class="nav-inner">
-<a href="/" class="nav-logo"><img src="/logo_host.png" alt="VPS для VPN" height="56"></a>
-<div class="nav-links">
+<a href="/" class="nav-logo"><img src="/logo_host.png" alt="Рейтинг хостингов" height="56"></a>
+<div class="nav-links" id="navLinks">
 <a href="#rating">Рейтинг</a>
 <a href="#compare">Сравнение</a>
 <a href="#guide">Как выбрать</a>
 <a href="#php">PHP/WordPress</a>
 <a href="#faq">FAQ</a>
 </div>
+<button class="burger" id="burger" aria-label="Меню">
+<svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+</button>
 </div>
 </nav>
 
@@ -726,6 +735,8 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:28px 20p
 <script>
 document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open')})});
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+document.getElementById('burger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('#navLinks a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open')})});
 </script>
 </body>
 </html>
