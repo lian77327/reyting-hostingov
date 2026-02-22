@@ -23,8 +23,8 @@ a:hover{text-decoration:underline}
 .wrap{max-width:920px;margin:0 auto;padding:0 20px}
 .nav{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);z-index:100;padding:0 24px}
 .nav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-logo{font-size:18px;font-weight:700;color:var(--text)}
-.nav-logo span{color:var(--accent)}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:36px;width:auto}
 .nav-links{display:flex;gap:20px;font-size:14px}
 .nav-links a{color:var(--text2);font-weight:500}
 .nav-links a:hover{color:var(--accent);text-decoration:none}
@@ -139,7 +139,7 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:28px 20p
 
 <nav class="nav">
 <div class="nav-inner">
-<a href="/" class="nav-logo"><img src="/logo_host.png" alt="VPS для VPN" height="36"></a>
+<a href="/" class="nav-logo"><img src="/logo_host.png" alt="VPS для VPN" height="56"></a>
 <div class="nav-links">
 <a href="#rating">Рейтинг</a>
 <a href="#compare">Сравнение</a>
